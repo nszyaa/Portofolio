@@ -1,0 +1,346 @@
+*{
+text-decoration: none;
+}
+html {
+scroll-behavior: smooth;
+padding: 40px;
+}
+
+nav {
+background-color: #6E6E6DFF;
+font-family: poppins;
+display: flex;
+justify-content: space-around;
+align-items: center;
+text-decoration: none;
+color: rgb(255, 255, 255);
+border-radius: 10px;
+padding: 20px;
+font-size: 1.5em;
+box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+} 
+
+nav a {
+background-color: inherit;
+color: black;
+padding: 14px 20px;
+border-radius: 10px;
+transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
+display: block;
+text-align: center;
+}
+
+nav a:hover {
+background-color: rgb(57, 57, 57);
+color: #6E6E6DFF;
+transform: scale(1.2);
+}
+
+body {
+background-color: rgb(237, 177, 168);
+font-family: poppins;
+}
+
+.intro {
+display: flex; 
+align-items: center;
+}
+
+.gambar {
+max-width: 500px; 
+margin-right: 20px;
+border-radius: 20%; 
+width: 500px; 
+height: 600px; 
+object-fit: cover;
+padding: 40px;
+position: relative;
+overflow: hidden;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gambar:hover {
+    transform: scale(1.1);
+}
+
+.teks-gambar {
+margin-left: 20px; 
+text-align: justify;
+font-size: 50px;
+line-height: 20%;
+text-shadow: rgb(152, 144, 144) 1px 0 15px;
+}
+
+.nama {
+text-align: justify;
+font-size: 20px;
+margin: 15px;
+}
+ 
+ .resume {
+display: flex;
+flex-wrap: wrap;
+ }
+
+ .box {
+margin: 20px;
+width: 150px;
+height: 240px;
+border-radius: 40px;
+border: 2px solid #050505;
+justify-content: space-between;
+align-items: center;
+font-size: 20px;
+flex-grow: 1;
+box-shadow: 0px 0px 5px rgb(0, 0, 0);
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.box:hover {
+transform: scale(1.1);
+}
+
+.section {
+padding: 30px;
+background-color: #ffe2d9;
+border-radius: 20px;
+font-family: poppins;
+color: rgb(124, 77, 71);
+text-align: justify;
+overflow: hidden;
+transition: transform 0.3s ease, filter 0.3s ease;
+margin-top: 50px;
+}
+
+.section:hover {
+transform: scale(1.05);
+}
+
+.kontener {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 40px;
+gap: 40px;
+}
+ 
+ .skill {
+padding: 30px;
+background-color: #ffe2d9;
+text-align: center;
+border-radius: 20px;
+flex: 1;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill:hover {
+transform: scale(1.05);
+}
+
+.tittle {
+font-size: 35px;
+line-height: 1px;
+color: rgb(124, 77, 71);
+}
+
+.list {
+font-size: 1.2em;
+color: rgb(124, 77, 71);
+}
+
+.link {
+color: black;
+}
+
+.skola {
+font-size: 18px; 
+font-weight: bold; 
+line-height: 15px; 
+text-align: center; 
+font-size: 25px;
+}
+
+.project {
+display: flex;
+justify-content: center;
+gap: 30px;
+padding: 30px;
+flex-wrap: wrap;
+box-sizing: border-box;
+}
+
+.project p {
+    font-size: 20px;
+    color: rgb(124, 77, 71);
+}
+
+.project-item {
+background-color: #ffe2d9;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+width: 400px;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-item:hover {
+transform: scale(1.1);
+}
+
+.project-img {
+width: 700px;
+height: 300px;
+max-width: 100%;
+border-radius: 5px;
+object-fit: cover;
+}
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6E6E6DFF; /* Warna footer gelap */
+    color: white; /* Warna teks putih */
+    font-size: 1.3em;
+    border-radius: 20px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center; /* Posisikan di tengah */
+    gap: 15px; /* Jarak antar elemen */
+    flex-wrap: wrap; /* Responsif untuk layar kecil */
+  }
+
+  .link {
+    display: flex;
+    align-items: center; /* Susun logo dan teks sejajar */
+    gap: 8px; /* Jarak antara ikon dan teks */
+    color: white;
+    text-decoration: none; /* Hilangkan garis bawah */
+    background-color: #6E6E6DFF; /* Warna biru link */
+    padding: 10px 15px;
+    border-radius: 5px; /* Sudut membulat */
+    transition: all 0.3s ease; /* Animasi halus saat hover */
+    font-size: 14px;
+  }
+
+  .link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .link:hover {
+    background-color: #334354; /* Biru lebih gelap saat hover */
+    transform: scale(1.1); /* Perbesar saat hover */
+  }
+
+@media (max-width: 441px) {
+    html {
+        padding: 10px;
+    }
+
+    nav {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+
+    nav a:hover {
+        background-color: rgb(57, 57, 57);
+        color: #6E6E6DFF;
+        transform: scale(1.2);
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gambar {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .teks-gambar {
+        text-align: center;
+        line-height: 1.2;
+        margin-left: 0;
+        font-size: 25px;
+    }
+
+    .nama {
+        font-size: 13px;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .section {
+        padding: 15px; 
+        margin: 0.5em; 
+        font-size: 0.8em; 
+        line-height: 1.8em;
+    }
+
+    .section h1 {
+        text-align: center;
+    }
+
+    .edu {
+        font-size: 20px;
+    }
+
+    .skola {
+        font-size: 19px;
+    }
+
+    .teks {
+        font-size: 0.8em;
+    }
+
+    .kontener {
+        padding: 30px;
+        font-size: 12px;
+    }
+
+    .tittle {
+        font-size: 20px;
+    }
+
+    .footer {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .nasya {
+        font-size: 1em;
+    }
+
+    .box {
+        width: 80%;
+        height: auto;
+        font-size: 0.9em;
+    }
+    
+    .judul {
+        font-size: 16px;
+    }
+    .project p {
+        font-size: 12px;
+    }
+
+    .link {
+    font-size: 9.5px; /* Ukuran lebih kecil di layar kecil */
+    padding: 1px 10px;
+    }
+
+
+}
