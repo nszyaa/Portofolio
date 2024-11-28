@@ -1,39 +1,95 @@
 *{
 text-decoration: none;
 }
+
 html {
 scroll-behavior: smooth;
 padding: 40px;
 }
 
-nav {
+/*navbar*/
+.navbar-desktop {
 background-color: #6E6E6DFF;
 font-family: poppins;
 display: flex;
 justify-content: space-around;
 align-items: center;
 text-decoration: none;
-color: rgb(255, 255, 255);
+color: white;
 border-radius: 10px;
-padding: 20px;
-font-size: 1.5em;
-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-} 
+padding: 28px;
+margin-top: 1px;
+font-size: 24px;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
 
-nav a {
+.navbar-desktop a{
 background-color: inherit;
 color: black;
 padding: 14px 20px;
 border-radius: 10px;
 transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
-display: block;
-text-align: center;
 }
 
-nav a:hover {
-background-color: rgb(57, 57, 57);
-color: #6E6E6DFF;
+.navbar-desktop a:hover {
+background-color: #333;
 transform: scale(1.2);
+}
+
+.navbar-mobile {
+display: none;
+background-color: #6E6E6DFF;
+color: white;
+padding: 10px 20px;
+position: relative;
+z-index: 10;
+}
+
+.hamburger {
+font-size: 24px;
+cursor: pointer;
+display: none;
+color: #fff;
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Menu Links */
+.nav-links {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #6E6E6DFF;
+}
+
+#menu-toggle:checked ~ .nav-links {
+  display: block;
 }
 
 body {
@@ -57,6 +113,7 @@ padding: 40px;
 position: relative;
 overflow: hidden;
 transition: transform 0.3s ease, filter 0.3s ease;
+z-index: 1;
 }
 
 .gambar:hover {
@@ -69,6 +126,11 @@ text-align: justify;
 font-size: 50px;
 line-height: 20%;
 text-shadow: rgb(152, 144, 144) 1px 0 15px;
+transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.teks-gambar:hover {
+  transform: scale(1.1);
 }
 
 .nama {
@@ -170,8 +232,8 @@ box-sizing: border-box;
 }
 
 .project p {
-    font-size: 20px;
-    color: rgb(124, 77, 71);
+font-size: 20px;
+color: rgb(124, 77, 71);
 }
 
 .project-item {
@@ -195,34 +257,35 @@ border-radius: 5px;
 object-fit: cover;
 }
 
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #6E6E6DFF; /* Warna footer gelap */
-    color: white; /* Warna teks putih */
-    font-size: 1.3em;
-    border-radius: 20px;
-  }
+.footer {
+text-align: center;
+padding: 20px;
+background-color: #6E6E6DFF; /* Warna footer gelap */
+color: white; /* Warna teks putih */
+font-size: 1.3em;
+border-radius: 20px;
+margin-top: 50px;
+}
 
-  .social-links {
-    display: flex;
-    justify-content: center; /* Posisikan di tengah */
-    gap: 15px; /* Jarak antar elemen */
-    flex-wrap: wrap; /* Responsif untuk layar kecil */
-  }
+.social-links {
+display: flex;
+justify-content: center; /* Posisikan di tengah */
+gap: 15px; /* Jarak antar elemen */
+flex-wrap: wrap; /* Responsif untuk layar kecil */
+}
 
-  .link {
-    display: flex;
-    align-items: center; /* Susun logo dan teks sejajar */
-    gap: 8px; /* Jarak antara ikon dan teks */
-    color: white;
-    text-decoration: none; /* Hilangkan garis bawah */
-    background-color: #6E6E6DFF; /* Warna biru link */
-    padding: 10px 15px;
-    border-radius: 5px; /* Sudut membulat */
-    transition: all 0.3s ease; /* Animasi halus saat hover */
-    font-size: 14px;
-  }
+.link {
+display: flex;
+align-items: center; /* Susun logo dan teks sejajar */
+gap: 8px; /* Jarak antara ikon dan teks */
+color: white;
+text-decoration: none; /* Hilangkan garis bawah */
+background-color: #6E6E6DFF; /* Warna biru link */
+padding: 10px 15px;
+border-radius: 5px; /* Sudut membulat */
+transition: all 0.3s ease; /* Animasi halus saat hover */
+font-size: 14px;
+}
 
   .link img {
     width: 20px;
@@ -234,26 +297,26 @@ object-fit: cover;
     transform: scale(1.1); /* Perbesar saat hover */
   }
 
-@media (max-width: 441px) {
+@media (max-width: 768px) {
     html {
         padding: 10px;
     }
 
-    nav {
-        font-size: 0.8em;
-        padding: 10px;
-    }
-
-    nav a {
-        font-size: 0.9em;
-        padding: 5px 10px;
-    }
-
-    nav a:hover {
-        background-color: rgb(57, 57, 57);
-        color: #6E6E6DFF;
-        transform: scale(1.2);
-    }
+    .navbar-desktop {
+        display: none;
+      }
+      
+      .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      
+      .hamburger {
+        display: block;
+      }
 
     .intro {
         flex-direction: column;
@@ -287,6 +350,8 @@ object-fit: cover;
         margin: 0.5em; 
         font-size: 0.8em; 
         line-height: 1.8em;
+        margin-bottom: 100px;
+        margin-top: 100px;
     }
 
     .section h1 {
@@ -331,16 +396,16 @@ object-fit: cover;
     }
     
     .judul {
-        font-size: 16px;
+        font-size: 25px;
+        margin-top: 100px;
     }
+
     .project p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .link {
     font-size: 9.5px; /* Ukuran lebih kecil di layar kecil */
     padding: 1px 10px;
     }
-
-
 }
